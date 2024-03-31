@@ -2,12 +2,21 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="css/movies.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
 </head>
 
 <body>
+    <button onclick="onMovieGenres()">Genres?</button>
+    <select class="select-genere" onchange="onSelectGenre(this)"></select>
+
+    <div class="genre-container"></div>
+
+
+    <script src="controller/movies.controller.js"></script>
+    <script src="service/movies.service.js"></script>
 
 </body>
 
