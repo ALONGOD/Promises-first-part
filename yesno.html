@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/yesno.css">
+    <script src="lib/jquery.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yesno</title>
+</head>
+
+<body>
+    <header>yesno</header>
+
+
+    <section class="container">
+        <input onchange="onCheckQuestion(this.value)" type="text" class="question">
+        <p class="loading" hidden>Loading...</p>
+        <div class="ans">
+            <h2></h2>
+            <img src="" onload="onImgReady()" />
+        </div>
+        <div class="after"></div>
+    </section>
+
+
+    <script src="controller/yesno.controller.js"></script>
+    <script src="service/yesno.service.js"></script>
+
+</body>
+
+</html>

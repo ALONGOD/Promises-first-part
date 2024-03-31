@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/address-book.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+</head>
+
+<body>
+    <header>Address Book</header>
+    <section class="container">
+        <button onclick="onAsk()">Load contacts</button>
+        <p class="loading" hidden>Loading...</p>
+        <div class="ans">
+
+        </div>
+    </section>
+
+    <script src='service/address-book.service.js'></script>
+    <script src='controller/address-book.controller.js'></script>
+</body>
+
+</html>
