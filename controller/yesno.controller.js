@@ -1,6 +1,9 @@
 'use strict'
 
-
+function onInit() {
+    const elInput = document.querySelector('input')
+    elInput.addEventListener('input', debounce(onCheckQuestion, 1000))
+}
 function onCheckQuestion(txt) {
     document.querySelector('.after').innerHTML = ''
     document.querySelector('.ans').hidden = true

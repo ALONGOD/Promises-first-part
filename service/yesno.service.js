@@ -12,3 +12,16 @@ function getDog(onSuccess) {
     $.get('https://dog.ceo/api/breeds/image/random', onSuccess)
 }
 
+
+function debounce(func, wait = 300) {
+    let timeout
+
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout)
+            func(...args)
+        }
+        clearTimeout(timeout)
+        timeout = setTimeout(later, wait)
+    }
+}
