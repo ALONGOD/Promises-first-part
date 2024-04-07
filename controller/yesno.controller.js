@@ -8,15 +8,20 @@ function onCheckQuestion(txt) {
     document.querySelector('.after').innerHTML = ''
     document.querySelector('.ans').hidden = true
     document.querySelector('.loading').hidden = false
-    if (txt.length > 3 && txt[txt.length - 1] === '?') getAns(renderAns)
+    if (txt.length > 3 && txt[txt.length - 1] === '?') {
+        getAns()
+            .then(ans => renderAns(ans))
+    }
 }
 
 
 function renderAns(ans) {
     if (ans.answer === 'yes') {
-        getJoke(renderJoke)
+        getJoke()
+            .then(joke => renderJoke(joke))
     } else {
-        getDog(renderDog)
+        getDog()
+            .then(dog => renderDog(dog))
     }
     console.log('ans is:', ans)
     document.querySelector('.ans h2').innerText = ans.answer

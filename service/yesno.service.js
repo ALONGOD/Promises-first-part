@@ -1,15 +1,18 @@
 'use strict'
 
-function getAns(onSuccess) {
-    $.get('https://yesno.wtf/api', onSuccess)
+function getAns() {
+    return axios.get('https://yesno.wtf/api')
+        .then(res => res.data)
 }
 
 function getJoke(onSuccess) {
-    $.get('https://api.chucknorris.io/jokes/random', onSuccess)
+    return axios.get('https://api.chucknorris.io/jokes/random')
+        .then(res => res.data)
 }
 
 function getDog(onSuccess) {
-    $.get('https://dog.ceo/api/breeds/image/random', onSuccess)
+    return axios.get('https://dog.ceo/api/breeds/image/random')
+        .then(res => res.data)
 }
 
 
