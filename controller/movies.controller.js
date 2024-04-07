@@ -3,11 +3,13 @@
 
 
 function onMovieGenres() {
-    getMovieGenres(renderMoviesGenres)
+    getMovieGenres()
+        .then(ans => renderMoviesGenres(ans))
 }
 
 function onSelectGenre(elSelect) {
-    getGenre(renderGenre, elSelect.value)
+    getGenre(elSelect.value)
+        .then(ans => renderGenre(ans))
 }
 
 
