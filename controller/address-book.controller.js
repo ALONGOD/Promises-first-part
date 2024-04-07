@@ -4,7 +4,8 @@
 function onAsk() {
     document.querySelector('.ans').hidden = true
     document.querySelector('.loading').hidden = false
-    getAns(renderAns)
+    getAns()
+        .then(ans => renderAns(ans))
 }
 
 function renderAns(ans) {
