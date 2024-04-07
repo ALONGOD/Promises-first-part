@@ -1,8 +1,12 @@
 'use strict'
 
-function getPokemonList(onSuccess,pokemonLength) {
-    $.get(`https://pokeapi.co/api/v2/pokemon?limit=${pokemonLength}`, onSuccess)
+function getPokemonList(pokemonLength) {
+    return axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${pokemonLength}`)
+        .then(ans => ans.data)
+
 }
-function getPokemon(onSuccess, name) {
-    $.get(`https://pokeapi.co/api/v2/pokemon/${name}`, onSuccess)
+function getPokemon(name) {
+    return axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+        .then(ans => ans.data)
+
 }

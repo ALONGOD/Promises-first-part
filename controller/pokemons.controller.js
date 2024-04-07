@@ -1,23 +1,20 @@
 'use strict'
 
-
+const pokemonNum = 20
 
 function onGetPokemon() {
-    if (document.querySelector('.pokemons').innerHTML === '') getPokemonList(callPokemon)
+    if (document.querySelector('.pokemons').innerHTML === '') {
+        getPokemonList(pokemonNum)
+            .then(ans => callPokemon(ans))
+    }
 }
 
 
 function callPokemon(pokemon) {
-    // console.log(pokemon)
-    // var strHtml = ''
-    // pokemon.results.foreach(pokemon => {
-    //     console.log(name)
-    // })
     pokemon.results.forEach(pokemon => {
-        getPokemon(renderPokemon, pokemon.name)
-
-
-    });
+        getPokemon(pokemon.name)
+            .then(ans => renderPokemon(ans))
+    })
 }
 
 function renderPokemon(pokemon) {
