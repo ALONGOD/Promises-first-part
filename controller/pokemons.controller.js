@@ -10,7 +10,6 @@ function onGetPokemon() {
 }
 
 
-
 function callPokemon(pokemon) {
     pokemon.results.forEach(pokemon => {
         getPokemon(pokemon.name)
