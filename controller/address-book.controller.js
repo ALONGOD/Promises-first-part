@@ -8,7 +8,6 @@ function onAsk() {
         .then(ans => renderAns(ans))
 }
 
-
 function renderAns(ans) {
     console.log('ans is:', ans)
     var phoneBookHtml = ''
